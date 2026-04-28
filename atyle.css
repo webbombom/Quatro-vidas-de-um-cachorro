@@ -1,23 +1,74 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Colorido</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Bem-vindo ao Meu Site Colorido!</h1>
-    </header>
-    
-    <main>
-        <p>Este é um site simples com cores personalizadas.</p>
-        <button>Click me!</button>
-    </main>
-    
-    <footer>
-        <p>Feito com amor e cor!</p>
-    </footer>
-</body>
-</html>
+/* Estilo geral do body */
+body {
+    background-color: #f0f8ff; /* Fundo azul claro */
+    font-family: Arial, sans-serif;
+    color: #333; /* Cor do texto */
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #4682b4; /* Azul escuro */
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+/* Estilo para o conteúdo principal */
+main {
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff; /* Fundo branco */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Títulos e textos dentro do main */
+main h3 {
+    color: #4682b4; /* Azul escuro */
+    font-size: 1.8em;
+}
+
+main p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Estilo para a lista no dicionário */
+ul {
+    list-style-type: none; /* Remove os marcadores da lista */
+    padding: 0;
+}
+
+ul li {
+    background-color: #e0f7fa; /* Azul claro para cada item */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 4px;
+}
+
+ul li strong {
+    color: #2f4f4f; /* Cor para o título das definições */
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #2f4f4f; /* Cor escura para o rodapé */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
