@@ -1,0 +1,41 @@
+import os
+import subprocess
+
+# Função para adicionar e enviar um commit para o GitHub
+def git_commit_and_push():
+    subprocess.run(["git", "add", "."])
+    subprocess.run(["git", "commit", "-m", "Adicionando nova frase grifada"])
+    subprocess.run(["git", "push"])
+
+# Função para grifar a frase
+def grifar_frase(frase):
+    # Adiciona asteriscos ao redor da frase para grifar (exemplo: *Frase grifada*)
+    return f"*{frase}*"
+
+# Função principal
+def gravar_frase():
+    frase = input("Digite a frase que deseja salvar: ")
+
+    # Grifa a frase com asteriscos
+    frase_grifada = grifar_frase(frase)
+    
+    # Nome do arquivo onde a frase será salva
+    arquivo = "frases.txt"
+    
+    # Verifica se o arquivo já existe, se não, cria
+    if not os.path.exists(arquivo):
+        with open(arquivo, 'w') as file:
+            file.write(f"{frase_grifada}\n")
+    else:
+        with open(arquivo, 'a') as file:
+            file.write(f"{frase_grifada}\n")
+    
+    # Exibe mensagem de confirmação
+    print(f"Frase grifada e salva: {frase_grifada}")
+    
+    # Chama a função para fazer commit e push para o GitHub
+    git_commit_and_push()
+
+# Executa o código
+if __name__ == "__main__":
+    gravar_frase()
